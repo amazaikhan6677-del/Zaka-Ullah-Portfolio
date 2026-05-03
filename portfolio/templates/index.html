@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaka Ullah - Python Developer & ML Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">ZU</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Zaka Ullah</h1>
+                <h2 class="hero-subtitle">Python Developer & ML Engineer</h2>
+                <p class="hero-desc">Building intelligent systems with Python, Machine Learning, and modern web technologies. Transforming data into actionable insights.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='images/zaka.png') }}" 
+                         alt="My Image" class="profile-img">
+                </div>
+                <div class="about-content">
+                    <p>
+                        Passionate Python Developer and Machine Learning Engineer with 4+ years of experience building scalable web applications and intelligent ML systems. I specialize in creating data-driven solutions that solve real-world problems.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <span>Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <h3>1+</h3>
+                            <span>Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <span>Client Satisfaction</span>
+                        </div>
+                    </div>
+                    <!-- ✅ Resume + WhatsApp buttons in About section too -->
+                    <div class="about-buttons">
+                        <a href="{{ url_for('static', filename='resume/resume.pdf') }}" 
+                           target="_blank" 
+                           class="btn btn-resume">
+                           View Resume
+                        </a>
+
+                        <a href="{{ url_for('static', filename='resume/resume.pdf') }}" 
+                            download 
+                            class="btn btn-resume">
+                            Download
+                        </a>
+                        <a href="https://wa.me/923441556864?text=Hi%20Zaka!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." 
+                           target="_blank" 
+                           class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Flask</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/Diabetes-Prediction-Using-Machine-Learning.webp') }}" alt="Diabetes Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3><a href="https://early-diabetes-prediction-1atp.vercel.app/" target="_blank">Diabetes Prediction System</a></h3>
+                        <p>ML-powered diabetes prediction system using Python, Scikit-learn, and Flask. Achieved 92% accuracy with real patient data.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Scikit-learn</span><span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/Gemini_Generated_Image_s7oixks7oixks7oi.png') }}" alt="House Maid Service">
+                    </div>
+                    <div class="project-content">
+                        <h3><a href="https://qatarhousemaid.com/" target="_blank">Qatar House Maid</a></h3>
+                        <p>Full-stack booking platform built with Flask, SQLite, and modern UI/UX design. Real-time booking and payment integration.</p>
+                        <div class="project-tech">
+                            <span>Flask</span><span>SQLite</span><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/qatar home maintenance.png') }}" alt="Qatar Home Maintenance">
+                    </div>
+                    <div class="project-content">
+                        <h3><a href="https://qatarhomemaintenance.com/" target="_blank">Qatar Home Maintenance</a></h3>
+                        <p>Comprehensive home services platform with service matching algorithm and admin dashboard. Built for scalability.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Flask</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <!-- ✅ WhatsApp contact item -->
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>
+                                <a href="https://wa.me/923001234567?text=Hi%20Zaka!%20I%20saw%20your%20portfolio." 
+                                   target="_blank" style="color: #25d366;">
+                                    Chat Directly
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/amazaikhan6677-del" target="_blank">Zaka ullah</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/zaka-ullah-159795404" target="_blank">Zaka Ullah</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Floating WhatsApp Button (always visible) -->
+    <a href="https://wa.me/923001234567?text=Hi%20Zaka!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." 
+       target="_blank" 
+       class="whatsapp-float" 
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Zaka Ullah. Built with ❤️ using Python & Flask.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
